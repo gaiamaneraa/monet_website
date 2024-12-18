@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Definisce il set di caratteri come UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Imposta il viewport per rendere la pagina responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titolo della pagina -->
+    <title>La storia</title>
+
+    <!-- Collegamento a Bootstrap per lo stile CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Collegamento alle icone di Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- Collegamento al font Poppins da Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
+    <!-- Collegamento al file CSS personalizzato (ultimo per avere priorità) -->
+    <link rel="stylesheet" href="../css/style_header.css">
+    <link rel="stylesheet" href="../css/stylestoria.css">
+
+    <!-- Collegamento al file JavaScript -->
+    <script src="../script/script.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- Div che conterrà l'header, il contenuto viene caricato dinamicamente via JavaScript -->
+    <div id="header" class="header_light"></div>
+
+    <!-- Div per lo sfondo, il contenuto viene caricato dinamicamente via css in base alla classe ligth o dark -->
+    <div id="background" class="background background_light"></div>
+
+    <!-- Div principale della home page, con classi per la modalità chiara -->
+    <div id="home" class="home home_light">
+        <!-- Barra di ricerca, il contenuto viene caricato dinamicamente via JavaScript -->
+        <div id="searchbar" class="searchbar_light"></div>
+
+        <!-- Form di accesso, il contenuto viene caricato dinamicamente via JavaScript -->
+        <div id="loginform" class="loginform_light"></div>
+
+        <!-- Sezione di testo principale -->
+        <div class="testo">
+            <!-- Introduzione su Monet e l'Impressionismo -->
+            <div class="introduzione" id="intro">
+                <!-- Immagine relativa alla storia dell'Impressionismo -->
+                <img class="immaginistoria" src="../images/Impressione, levar del sole.webp"
+                    alt="impressione, levar del sole">
+                <h2> <b>Monet e il legame con l'impressionismo</b></h2>
+                <p><b>Claude Monet</b> è uno dei pittori più celebri e influenti del <b>movimento impressionista</b>, che ha
+                    rivoluzionato il mondo dell'arte nel tardo XIX secolo. Nato a <b>Parigi</b> nel 1840, Monet sviluppò presto
+                    una passione per la pittura <i>en plein air</i>, ovvero all'aria aperta, cercando di catturare la luce
+                    naturale e i suoi cambiamenti momentanei. <br><br>
+                   <b>L'Impressionismo</b>, movimento di cui Monet fu uno dei fondatori, si distinse per il suo approccio
+                    innovativo alla pittura, caratterizzato da pennellate rapide e visibili, colori vivaci e
+                    un'attenzione particolare agli <b>effetti della luce</b> e dell'atmosfera.<br><br>
+                    Il termine <i>"Impressionismo"</i> deriva dal titolo di un'opera di Monet, <i>"Impression, soleil levant"</i>
+                    (Impressione, levar del sole), presentata alla prima mostra impressionista nel <b>1874</b>. Questo
+                    movimento rappresentava una <b>rottura con la tradizione accademica</b>, abbandonando i dettagli precisi e
+                    i temi storici o mitologici a favore di <b>scene di vita quotidiana, paesaggi e momenti fugaci</b>. Monet e
+                    i suoi colleghi impressionisti, tra cui <b>Renoir, Degas e Pissarro</b>, sfidarono le convenzioni
+                    artistiche del loro tempo, ponendo le basi per lo sviluppo dell'arte moderna. Le opere di Monet, con
+                    i loro giochi di luce e colore, continuano a incantare e ispirare, testimoniando l'innovazione e la
+                    bellezza di questo straordinario movimento artistico. </p>
+            </div>
+
+            <!-- Sezione biografica dell'artista -->
+            <div class="introduzione" id="biografia">
+                <!-- Immagine dell'autoritratto di Monet -->
+                <img class="immaginistoria" src="../images/autoritratto.jpg" alt="Autoritratto di Monet">
+                <h2><b>Biografia dell'artista</b></h2>
+                <p>Fin da giovane, Monet dimostrò un talento straordinario per l'arte. Durante la sua adolescenza,
+                    studiò presso l'<b>Accademia Suisse</b> a Parigi, dove incontrò altri artisti emergenti con cui condivise
+                    idee e tecniche innovative. La sua carriera artistica fu però interrotta dalla <b>guerra
+                        franco-prussiana</b>, durante la quale prestò servizio nell'esercito francese.<br> <br>
+                    Dopo la guerra, Monet si trasferì a <b>Argenteuil</b>, un sobborgo di Parigi, dove trascorse alcuni dei
+                    suoi anni più prolifici. Qui dipinse molte delle sue opere più celebri, tra cui <i>"Impression, soleil
+                        levant"</i>, che ispirò il nome del movimento impressionista. La sua tecnica distintiva, caratterizzata
+                    da pennellate rapide e sfumature di luce e colore, ha reso i suoi dipinti immediatamente
+                    riconoscibili e ha influenzato generazioni di artisti successivi.<br><br>
+                    Uno degli elementi chiave del lavoro di Monet è stata la sua passione per la <b>luce</b> e il cambiamento
+                    delle <b>condizioni atmosferiche</b>. Dipinse la stessa scena in momenti diversi della giornata, catturando
+                    l'effetto mutevole della luce solare e delle stagioni sull'ambiente circostante. I suoi dipinti di
+                    giardini di <b>ninfee e paesaggi fluviali</b> sono diventati icone dell'arte moderna, celebrando la
+                    bellezza della natura con una sensibilità senza tempo.<br> <br>
+                    Nonostante le sfide finanziarie e personali, Monet continuò a dipingere fino alla fine della sua
+                    vita. Si trasferì a <b>Giverny</b> nel 1883, dove creò un <b>giardino di ispirazione giapponese</b> che divenne la
+                    fonte d'ispirazione per molte delle sue opere più famose. Qui, immerso nella natura, Monet dipinse
+                    le sue celebri serie di <i>"Ninfee"</i>, che rappresentano il culmine del suo lavoro e il suo amore per la
+                    bellezza effimera del mondo naturale.<br><br>
+                    Claude Monet <b>morì il 5 dicembre 1926</b>, lasciando un'eredità artistica immortale che continua a
+                    influenzare e ispirare gli artisti di oggi. La sua capacità di catturare l'essenza della luce e
+                    della vita attraverso la pittura ha lasciato un'impronta indelebile sulla storia dell'arte,
+                    confermandolo come uno dei più grandi maestri dell'Impressionismo e dell'intera storia dell'arte
+                    occidentale.
+                </p>
+            </div>
+
+            <!-- Sezione sulla tecnica pittorica impressionista -->
+            <div class="introduzione" id="pittura">
+                <!-- Immagine della casa di Monet ad Argenteuil -->
+                <img class="immaginistoria" id="imgpittura" src="../images/artisthousearg.jpg"
+                    alt="la casa dell'artista ad Argenteuil">
+                <h2> <b>La tecnica pittorica</b></h2>
+                <p> L'impressionismo è un movimento artistico nato in Francia nella <b>seconda metà del XIX secolo</b>. Caratterizzato da una tecnica pittorica innovativa, l'impressionismo si distingue per l'uso di <b>colori vivaci</b>, <b>pennellate rapide</b> e la predilezione per soggetti della <b>vita quotidiana e paesaggi naturali</b>. Gli artisti impressionisti cercavano di catturare l'effimera bellezza della luce e dell'atmosfera, spesso dipingendo all'aperto (Ien plein air) per cogliere meglio le <b>variazioni di colore e luminosità</b> nel corso della giornata. <br>
+                    <br> Le pennellate brevi e spezzate degli impressionisti, apparentemente caotiche da vicino, si fondono in <b>immagini armoniose</b> quando osservate da una certa distanza. Questa tecnica permette di rendere la <b>sensazione visiva</b> piuttosto che i dettagli precisi, offrendo un'<b>impressione</b> più immediata e vibrante della realtà.<br><br>
+                    I colori utilizzati sono puri e raramente mescolati sulla tavolozza, ma accostati direttamente sulla tela per sfruttare la loro interazione ottica. Questo approccio, ispirato anche dalle <b>teorie scientifiche sulla percezione del colore</b>, conferisce alle opere un'energia e una freschezza senza precedenti. <br><br>
+                    Artisti come <b>Claude Monet</b>, <b>Pierre-Auguste Renoir</b> e <b>Edgar Degas</b> sono tra i più celebri esponenti del movimento impressionista. Le loro opere hanno rivoluzionato il mondo dell'arte, influenzando profondamente le generazioni successive di pittori e aprendo la strada alle avanguardie del XX secolo. L'impressionismo continua ad affascinare per la sua capacità di evocare l'<b>emozione del momento</b> attraverso un linguaggio visivo innovativo e suggestivo. <br><br>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

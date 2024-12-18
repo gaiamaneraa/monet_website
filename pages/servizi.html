@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Definizione del set di caratteri UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Impostazione del viewport per una corretta visualizzazione su dispositivi mobili -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titolo della pagina -->
+    <title>I servizi</title>
+
+    <!-- Collegamento al framework Bootstrap per lo stile CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Collegamento alle icone di Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- Collegamento al font Poppins da Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
+    <!-- Collegamento ai file CSS personalizzati (ultimo per avere priorità) -->
+    <link rel="stylesheet" href="../css/style_header.css">
+    <link rel="stylesheet" href="../css/styleservizi.css">
+
+    <!-- Collegamento ai file JavaScript con attributo defer per il caricamento asincrono -->
+    <script src="../script/script.js" defer></script>
+    <script src="../script/script_servizi.js" defer></script>
+
+</head>
+
+<body>
+    <!-- Div che conterrà l'header, il contenuto viene caricato dinamicamente via JavaScript -->
+    <div id="header" class="header_light"></div>
+
+    <!-- Div per lo sfondo, il contenuto viene caricato dinamicamente via css in base alla classe ligth o dark -->
+    <div id="background" class="background background_light"></div>
+
+    <!-- Div principale della home page, con classi per la modalità chiara -->
+    <div id="home" class="home home_light">
+        <!-- Barra di ricerca, il contenuto viene caricato dinamicamente via JavaScript -->
+        <div id="searchbar" class="searchbar_light"></div>
+
+        <!-- Form di accesso, il contenuto viene caricato dinamicamente via JavaScript -->
+        <div id="loginform" class="loginform_light"></div>
+
+        <!-- Contenitore delle card -->
+        <div class="card-container">
+            <!-- Griglia delle card -->
+            <div class="card-grid">
+                <!-- Prima card -->
+                <div class="card">
+                    <img src="../images/A.svg" alt="#">
+                    <div class="card-content">
+                        <h3>Eventi</h3>
+                        <p>Durante i weekend Art Magazine offre diversi eventi nel corso dell'anno, di solito sono
+                            mostre di quadri in esclusiva, con sconti e omaggi per gli abbonati </p>
+                    </div>
+                </div>
+
+                <!-- Seconda card -->
+                <div class="card">
+                    <img src="../images/R.svg" alt="#">
+                    <div class="card-content">
+                        <h3>Abbonati</h3>
+                        <p> Per abbonarti alla rivista vai nella cartoleria più vicina a casa o Contattaci
+                            al servizio clienti al numero +12 345 678 911 </p>
+                    </div>
+                </div>
+
+                <!-- Terza card -->
+                <div class="card">
+                    <img src="../images/T.svg" alt="#">
+                    <div class="card-content">
+                        <h3>Renoir</h3>
+                        <p>Dal 20 marzo al 15 aprile si terrà la nostra mostra con quadri in esclusiva dal Museo d'Orsay di Parigi
+                            con quadri di Renoir e altri artisti impressionisti </p>
+                    </div>
+                </div>
+
+                <!-- Quarta card -->
+                <div class="card">
+                    <img src="../images/M.svg" alt="#">
+                    <div class="card-content">
+                        <h3>Cézanne</h3>
+                        <p> "Da Cézanne a Picasso" è il titolo del prossimo numero della nostra rivista, che uscirà tra due settimane in esclusiva
+                            per gli abbonati e solo in formato a cartaceo </p>
+                    </div>
+                </div>
+
+                <!-- Quinta card -->
+                <div class="card">
+                    <img src="../images/A.svg" alt="#">
+                    <div class="card-content">
+                        <h3>Social</h3>
+                        <p> se sei interessato a seguirci sui social, visita la nostra pagina
+                            <b>@pagina.a.caso</b> su Instagram, oppure cerca <b>paginaacaso</b> su Facebook</p>
+                    </div>
+                </div>
+
+                <!-- Sesta card -->
+                <div class="card">
+                    <img src="../images/G.svg" alt="persone che parlano al telefono">
+                    <div class="card-content">
+                        <h3>Contattaci</h3>
+                        <p><b>Ufficio:</b> dalle 9:00 alle 13:00 
+                            <br> da martedì a venerdì
+                            <br> <b>Numero di telefono:</b> +123 456 789 1010
+                                <b>Indirizzo:</b> via X numero X
+                            ></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottone per il logout (con funzione JavaScript associata) -->
+        <button id="logout_button" onclick="logout_button()">Log out</button>
+    </div>
+</body>
+
+</html>

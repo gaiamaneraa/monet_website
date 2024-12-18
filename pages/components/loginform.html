@@ -1,0 +1,39 @@
+<!-- Codice per il form di login, importato dinamicamente tramite JavaScript in ogni pagina -->
+<div class="form">
+    <!-- Contenitore principale del form -->
+    <div class="form_main">
+        <div class="form_container">
+            <!-- Icona per chiudere il form -->
+            <a id="close_form" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" fill="currentColor"
+                    class="bi bi-x-circle" viewBox="0 0 16 16">
+                    <path
+                        d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                    <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                </svg>
+            </a>
+
+            <!-- Titolo del form -->
+            <h1>Log In</h1>
+
+            <!-- Campo email -->
+            <div class="email">
+                <label for="email">Email</label>
+                <input id="email" type="email" placeholder="Write Your Email">
+            </div>
+
+            <!-- Campo password -->
+            <div class="password">
+                <label for="password">Password</label>
+                <input id="password" type="password" placeholder="Write Your Password">
+            </div>
+
+            <!-- Messaggio di errore o conferma login -->
+            <div id="login_display"></div>
+
+            <!-- Pulsante per effettuare il login -->
+            <button id="login_button">Log in</button>
+        </div>
+    </div>
+</div>

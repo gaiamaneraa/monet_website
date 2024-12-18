@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Reset generale per eliminare margini e padding predefiniti e usare il box-sizing: border-box per tutti gli elementi */
+}
+
+body {
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  /* Corpo della pagina: allineamento verticale e orizzontale centrato, direzione colonna e altezza minima 100vh */
+}
+
+.background_light {
+  background-image: url(../images/sfondohomeblur.jpg);
+  /* Sfondo chiaro con immagine sfocata */
+}
+
+.background_dark {
+  background-image: url(/images/sfondoscuro_blur.jpg);
+  /* Sfondo scuro con immagine sfocata */
+}
+
+#main_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  /* Contenuto principale: layout flessibile con direzione colonna, centrato e altezza 100% */
+}
+
+.slider_container {
+  max-width: 1200px;
+  width: 95%;
+  /* Contenitore dello slider: larghezza massima 1200px e larghezza 95% */
+}
+
+.slider-wrapper {
+  position: relative;
+  /* Wrapper dello slider: posizione relativa per posizionamento assoluto dei pulsanti */
+}
+
+.slider-wrapper .slide-button {
+  position: absolute;
+  top: 50%;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  z-index: 5;
+  display: flex;
+  cursor: pointer;
+  font-size: 2.2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  /* Pulsanti dello slider: posizione assoluta, centrati verticalmente, senza bordo, altezza e larghezza 50px,
+     indice z 5, layout flessibile centrato, dimensione del font 2.2rem, bordi arrotondati e trasformazione verticale */
+}
+
+.home_light .slider-wrapper .slide-button {
+  background: #000;
+  color: #fff;
+  /* Pulsanti dello slider in modalità chiara: sfondo nero e colore del testo bianco */
+}
+
+.home_dark .slider-wrapper .slide-button {
+  background: #fff;
+  color: #000;
+  /* Pulsanti dello slider in modalità scura: sfondo bianco e colore del testo nero */
+}
+
+.home_light .slider-wrapper .slide-button:hover {
+  background: dodgerblue;
+  /* Colore di sfondo al passaggio del mouse in modalità chiara */
+}
+
+.home_dark .slider-wrapper .slide-button:hover {
+  background: purple;
+  /* Colore di sfondo al passaggio del mouse in modalità scura */
+}
+
+.slider-wrapper .slide-button#prev-slide {
+  left: -25px;
+  display: none;
+  /* Pulsante slide precedente: posizionato a sinistra e nascosto */
+}
+
+.slider-wrapper .slide-button#next-slide {
+  right: -25px;
+  /* Pulsante slide successivo: posizionato a destra */
+}
+
+.slider-wrapper .image-list {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 18px;
+  font-size: 0;
+  list-style: none;
+  margin-bottom: 30px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  /* Lista delle immagini nello slider: layout a griglia con 10 colonne uguali, gap 18px,
+     font-size 0, senza stili di lista, margine inferiore 30px, overflow orizzontale
+     e senza scrollbar */
+}
+
+.slider-wrapper .image-list::-webkit-scrollbar {
+  display: none;
+  /* Nasconde la scrollbar in WebKit */
+}
+
+.slider-wrapper .image-list .image-item {
+  width: 325px;
+  height: 400px;
+  object-fit: cover;
+  /* Elementi immagine nella lista: larghezza 325px, altezza 400px e copertura dell'oggetto */
+}
+
+.slider_container .slider-scrollbar {
+  height: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  /* Barra di scorrimento dello slider: altezza 24px, larghezza 100%, layout flessibile centrato */
+}
+
+.slider-scrollbar .scrollbar-track {
+  width: 100%;
+  height: 2px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  position: relative;
+  /* Traccia della scrollbar: larghezza 100%, altezza 2px, layout flessibile centrato,
+     bordi arrotondati e posizione relativa */
+}
+
+.home_light .slider-scrollbar .scrollbar-track {
+  background: #ccc;
+  /* Traccia della scrollbar in modalità chiara: sfondo grigio chiaro */
+}
+
+.home_dark .slider-scrollbar .scrollbar-track {
+  background: #000;
+  /* Traccia della scrollbar in modalità scura: sfondo nero */
+}
+
+.slider-scrollbar:hover .scrollbar-track {
+  height: 4px;
+  /* Altezza della traccia della scrollbar al passaggio del mouse */
+}
+
+.slider-scrollbar .scrollbar-thumb {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  cursor: grab;
+  border-radius: inherit;
+  /* Thumb della scrollbar: posizione assoluta, larghezza 50%, altezza 100%, cursore grab,
+     bordi arrotondati ereditati */
+}
+
+.home_light .slider-scrollbar .scrollbar-thumb {
+  background: #000;
+  /* Thumb della scrollbar in modalità chiara: sfondo nero */
+}
+
+.home_dark .slider-scrollbar .scrollbar-thumb {
+  background: #ccc;
+  /* Thumb della scrollbar in modalità scura: sfondo grigio chiaro */
+}
+
+.slider-scrollbar .scrollbar-thumb:active {
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
+  /* Stile del thumb attivo: cursore grabbing, altezza 8px e spostamento verso l'alto */
+}
+
+.slider-scrollbar .scrollbar-thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+  /* Pseudo-elemento after del thumb: contenuto vuoto, posizione assoluta,
+     spostamento verso l'alto e verso il basso */
+}
+
+/* Stili per dispositivi mobili e tablet */
+@media only screen and (max-width: 1023px) {
+  .slider-wrapper .slide-button {
+      display: none !important;
+      /* Nasconde i pulsanti dello slider su schermi fino a 1023px */
+  }
+
+  .slider-wrapper .image-list {
+      gap: 10px;
+      margin-bottom: 15px;
+      scroll-snap-type: x mandatory;
+      /* Riduce il gap tra le immagini e il margine inferiore,
+         aggiunge lo snap di scorrimento orizzontale su schermi fino a 1023px */
+  }
+
+  .slider-wrapper .image-list .image-item {
+      width: 280px;
+      height: 380px;
+      /* Riduce le dimensioni delle immagini su schermi fino a 1023px */
+  }
+
+  .slider-scrollbar .scrollbar-thumb {
+      width: 20%;
+      /* Riduce la larghezza del thumb della scrollbar su schermi fino a 1023px */
+  }
+}
+
+.introduzione {
+  margin: auto;
+  width: 70%;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  /* Centra la sezione di introduzione, imposta la larghezza al 70% del contenitore, e aggiunge padding in alto, a sinistra e a destra */
+}
+
+.home_light .introduzione {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  /* Stile della sezione introduzione in modalità chiara: sfondo semi-trasparente bianco e testo bianco */
+}
+
+.home_dark .introduzione {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  /* Stile della sezione introduzione in modalità scura: sfondo semi-trasparente nero e testo bianco */
+}
+
+.introduzione h1 {
+  font-size: 48px;
+  /* Stile per i titoli (h2) all'interno della sezione introduzione: dimensione del font */
+}
+
+.introduzione p {
+  font-size: 18px;
+  padding-bottom: 30px;
+  /* Stile per i paragrafi all'interno della sezione introduzione: dimensione del font e padding in basso */
+}
+

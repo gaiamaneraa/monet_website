@@ -1,0 +1,207 @@
+.background_light {
+  background-image: url(../images/sfondohomeblur.jpg);
+  background-size: cover;
+  /* Sfondo chiaro con immagine di sfondo sfocata che copre l'intera area */
+}
+
+.background_dark {
+  background-image: url(/images/sfondoscuro_blur.jpg);
+  background-size: cover;
+  /* Sfondo scuro con immagine di sfondo sfocata che copre l'intera area */
+}
+
+.body {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    /* Corpo della pagina con layout flessibile centrato verticalmente */
+}
+
+.museimappe {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    /* Contenitore per mappe dei musei: layout flessibile centrato con padding verticale */
+}
+
+.museitesto {
+    margin: auto;
+    width: 70%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    /* Testo dei musei: centrato, larghezza 70% e padding */
+}
+
+.home_light .museitesto {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    /* Stile del testo dei musei in modalità chiara: sfondo semitrasparente bianco e testo bianco */
+}
+
+.home_dark .museitesto {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    /* Stile del testo dei musei in modalità scura: sfondo semitrasparente nero e testo bianco */
+}
+
+.museitesto h2 {
+    font-size: 42px;
+    /* Titolo del testo dei musei: dimensione del font */
+}
+
+.museitesto p {
+    font-size: 16px;
+    padding-bottom: 30px;
+    /* Paragrafo del testo dei musei: dimensione del font e padding inferiore */
+}
+
+/* Codice CSS per la galleria */
+.album .responsive-container-block {
+  min-height: 75px;
+  height: 60;
+  width: 100%;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
+  justify-content: flex-start;
+    /* Contenitore reattivo per la galleria: altezza minima, larghezza 100%, padding,
+       layout flessibile che si avvolge, centrato e giustificato all'inizio */
+}
+
+.album .responsive-container-block.bg {
+    max-width: 1320px;
+    margin: 0;
+    justify-content: space-between;
+    /* Contenitore reattivo della galleria con sfondo: larghezza massima, senza margine
+       e giustificato tra gli elementi */
+}
+
+.single-image-container:hover .img {
+    cursor: pointer;
+    filter: blur(5px);
+    /* Effetto sfocatura sulle immagini quando si passa con il mouse */
+}
+
+.album {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Galleria: layout flessibile centrato */
+}
+
+.album .img {
+    width: 100%;
+    margin: 0 0 20px 0;
+    aspect-ratio: 16/11;
+    /* Immagini nella galleria: larghezza 100%, margine inferiore e rapporto d'aspetto 16:11 */
+}
+
+.album .responsive-container-block.img-cont {
+    flex-direction: column;
+    max-width: 33.3%;
+    min-height: auto;
+    margin: 0;
+    height: 100%;
+    /* Contenitore delle immagini: layout flessibile con colonna,
+       larghezza massima 33.3%, altezza automatica, senza margine e altezza 100% */
+}
+
+@media (max-width: 1024px) {
+    .album .img {
+      margin: 0 0 18px 0;
+      /* Margine inferiore ridotto per le immagini su schermi fino a 1024px */
+    }
+}
+
+@media (max-width: 768px) {
+    .album .img {
+      max-width: 32.5%;
+      margin: 0;
+      /* Larghezza massima delle immagini ridotta e senza margine su schermi fino a 768px */
+    }
+    .album .responsive-container-block.bg {
+      flex-direction: column;
+      /* Disposizione a colonna del contenitore reattivo della galleria su schermi fino a 768px */
+    }
+    .album .responsive-container-block.img-cont {
+      max-width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      /* Disposizione a riga e larghezza massima 100% per il contenitore delle immagini,
+         giustificato tra gli elementi su schermi fino a 768px */
+    }
+    .album .img.img-big {
+      max-width: 49%;
+      margin: 0;
+      /* Larghezza massima ridotta per le immagini grandi su schermi fino a 768px */
+    }
+}
+
+@media (max-width: 500px) {
+    .album .img {
+      max-width: 94%;
+      margin: 0 0 25px 0;
+      /* Larghezza massima delle immagini ridotta e margine inferiore su schermi fino a 500px */
+    }
+    .album .responsive-container-block.img-cont {
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      /* Disposizione a colonna, centrato e padding per il contenitore delle immagini
+         su schermi fino a 500px */
+    }
+    .album .img.img-big {
+      max-width: 94%;
+      margin: 0 0 25px 0;
+      /* Larghezza massima delle immagini grandi ridotta e margine inferiore
+         su schermi fino a 500px */
+    }
+    .album .img.img-last {
+      margin: 0 0 5px 0;
+      /* Margine inferiore per l'ultima immagine su schermi fino a 500px */
+    }
+}
+
+
+
+.single-image-container:hover .caption {
+    opacity: 1;
+    /* Mostra la didascalia al passaggio del mouse */
+}
+
+.single-image-container {
+    position: relative;
+    text-align: center;
+    color: white;
+    /* Contenitore dell'immagine singola: posizione relativa, testo centrato e colore del testo bianco */
+}
+
+.caption {
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Stile delle didascalie: posizione assoluta, opacità 0, centrata verticalmente e orizzontalmente
+       tramite trasformazione */
+}
+
+.home_light .caption {
+    color: white;
+    /* Colore del testo della didascalia in modalità chiara */
+}
+
+.home_dark .caption {
+    color: black;
+    /* Colore del testo della didascalia in modalità scura */
+}

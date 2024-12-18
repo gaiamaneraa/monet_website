@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I quadri</title>
+
+    <!-- Collegamento al file JavaScript -->
+    <script src="../script/script.js" defer></script>
+
+    <!-- Collegamento a Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <!-- Collegamento alle icone di Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- Collegamento al font Poppins da Google Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
+
+    <!-- Collegamento ai fogli di stile personalizzati -->
+    <link rel="stylesheet" href="../css/style_header.css">
+    <link rel="stylesheet" href="../css/stylequadri.css">
+</head>
+
+<body>
+
+    <!-- Div che conterrà l'header, il contenuto viene caricato dinamicamente via JavaScript -->
+    <div id="header" class="header_light"></div>
+
+    <!-- Div per lo sfondo, il contenuto viene caricato dinamicamente via css in base alla classe ligth o dark -->
+    <div id="background" class="background background_light"></div>
+
+    <!-- Div principale della home page, con classi per la modalità chiara -->
+    <div id="home" class="home home_light">
+        <!-- Barra di ricerca, il contenuto viene caricato dinamicamente via JavaScript -->
+        <div id="searchbar" class="searchbar_light"></div>
+
+        <!-- Form di accesso, il contenuto viene caricato dinamicamente via JavaScript -->
+        <div id="loginform" class="loginform_light"></div>
+
+        <!-- Carosello di immagini -->
+        <div class="container">
+            <div class="slide">
+                <!-- Elemento del carosello con descrizione e link -->
+                <div class="item" style="background-image: url(../images/boulevard.jpg);">
+                    <div class="content">
+                        <div class="name">Boulevard des Capucines</div>
+                        <div class="des">The Nelson-Atkins Museum of Art, Kansas City, 1873, olio su tela</div>
+                        <button>
+                            <a target="_blank" href="https://artsandculture.google.com/asset/boulevard-des-capucines/JQF8ZdIG2etsxw?hl=it&ms=%7B%22x%22%3A0.5%2C%22y%22%3A0.5%2C%22z%22%3A8.127194331843233%2C%22size%22%3A%7B%22width%22%3A3.3690966623366063%2C%22height%22%3A1.2375000000000003%7D%7D">
+                                Vai al sito
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Elemento del carosello con descrizione e link -->
+                <div class="item" style="background-image: url(../images/donna_parasole.jpg);">
+                    <div class="content">
+                        <div class="name">Donna con parasole (La passeggiata)</div>
+                        <div class="des">National Gallery of Art, Washington DC, 1875, olio su tela</div>
+                        <button>
+                            <a target="_blank" href="https://artsandculture.google.com/asset/woman-with-a-parasol-madame-monet-and-her-son/EwHxeymQQnprMg?hl=it&ms=%7B%22x%22%3A0.5%2C%22y%22%3A0.5%2C%22z%22%3A8.225597485448663%2C%22size%22%3A%7B%22width%22%3A3.1021875557206537%2C%22height%22%3A1.2375%7D%7D">
+                                Vai al sito
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Elemento del carosello con descrizione e link -->
+                <div class="item" style="background-image: url(../images/iris_garden.jpg);">
+                    <div class="content">
+                        <div class="name">Il giardino dell'artista a Giverny</div>
+                        <div class="des">Belvedere, Vienna, 1902, olio su tela</div>
+                        <button>
+                            <a target="_blank" href="https://it.wikipedia.org/wiki/Il_giardino_dell'artista_a_Giverny">
+                                Vai al sito
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Elemento del carosello con descrizione e link -->
+                <div class="item" style="background-image: url(../images/palazzo_ducale.jpg);">
+                    <div class="content">
+                        <div class="name">Il Palazzo Ducale</div>
+                        <div class="des">Guggenheim Museum, New York, 1908, olio su tela</div>
+                        <button>
+                            <a target="_blank" href="https://artsandculture.google.com/project/monetwashere?hl=it">
+                                Vai al sito
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Elemento del carosello con descrizione e link -->
+                <div class="item" style="background-image: url(../images/poplars.jpg);">
+                    <div class="content">
+                        <div class="name">Pioppi sul fiume Epte, Scozia</div>
+                        <div class="des">National Galleries Scotland, Edinburgo, 1891, olio su tela</div>
+                        <button>
+                            <a target="_blank" href="https://artsandculture.google.com/asset/poplars-on-the-epte/tAF_YbFvVelS9Q?hl=it&ms=%7B%22x%22%3A0.5%2C%22y%22%3A0.5%2C%22z%22%3A8.856158566343797%2C%22size%22%3A%7B%22width%22%3A2.4970653789004484%2C%22height%22%3A1.2375000000000014%7D%7D">
+                                Vai al sito
+                            </a>
+                        </button>
+                    </div>
+                </div>
+                <!-- Elemento del carosello con descrizione e link -->
+                <div class="item" style="background-image: url(../images/rouen.jpg);">
+                    <div class="content">
+                        <div class="name">Cattedrale di Rouen all'alba</div>
+                        <div class="des">John Paul Getty Museum, Los Angeles, 1896, olio su tela</div>
+                        <button>
+                            <a target="_blank" href="https://artsandculture.google.com/story/2gXhjhmKqfavLg">
+                                Vai al sito
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pulsanti di navigazione del carosello -->
+            <div class="buttongallery">
+                <!-- Pulsante di scorrimento in avanti -->
+                <button class="prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M12 8a.5.5 0 0 1-.5.5H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5a.5.5 0 0 1 .5.5"/>
+                    </svg>
+                </button>
+                <!-- Pulsante di scorrimento indietro -->
+                <button class="next">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div

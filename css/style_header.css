@@ -1,0 +1,513 @@
+/* In questo file c'è solo il CSS dell'header e dei form, in modo tale da lavorare in maniera più chiara */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: Poppins, sans-serif;
+    /* Reset di base per tutti gli elementi per eliminare margini e padding predefiniti,
+       impostare il box-sizing per includere padding e bordi nelle dimensioni totali,
+       rimuovere lo stile di lista e decorazione del testo,
+       e impostare un font di default */
+}
+
+html body {
+    overflow: visible;
+    /* Imposta lo scroll visibile per l'elemento body */
+}
+
+.background {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: repeat-y;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /* Configurazione dello sfondo: posizione centrata, copertura totale,
+       ripetizione verticale, fissato in posizione, dimensioni e z-index */
+}
+
+.background_light {
+    background-image: url(/images/sfondohome.jpg);
+    /* Immagine di sfondo per la modalità chiara */
+}
+
+.background_dark {
+    background-image: url(/images/sfondoscuro.jpg);
+    /* Immagine di sfondo per la modalità scura */
+}
+
+a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    /* Rimozione della decorazione del testo e dei margini e padding per i link */
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    /* Contenitore principale: altezza 100% della viewport e larghezza 100% */
+}
+
+.header {
+    margin: 0;
+    padding: 0;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    /* Header: altezza 10% della viewport, larghezza 100%,
+       layout flessibile con spazio tra gli elementi,
+       allineamento centrato e padding laterale */
+}
+
+.header_light {
+    background-color: white;
+    color: black;
+    /* Stile del header per la modalità chiara */
+}
+
+.header_dark {
+    background-color: rgb(44, 44, 44);
+    color: white;
+    /* Stile del header per la modalità scura */
+}
+
+.header a {
+    color: inherit;
+    /* I link nell'header ereditano il colore del testo del genitore */
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    text-decoration-line: none;
+    /* Rimozione di margini e padding per gli elementi della lista */
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    /* Lista non ordinata: layout flessibile con spazio tra gli elementi,
+       allineamento centrato e gap tra gli elementi */
+}
+
+ul li a {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    transition: all .5s;
+    /* Stile dei link negli elementi della lista: rimozione di margini e padding,
+       cambio del cursore e transizione */
+}
+
+ul li a:hover {
+    margin: 0;
+    padding: 0;
+    /* Stile per i link negli elementi della lista al passaggio del mouse */
+}
+
+.header_light ul li a:hover {
+    color: dodgerblue;
+    /* Colore del link al passaggio del mouse in modalità chiara */
+}
+
+.header_dark ul li a:hover {
+    color: purple;
+    /* Colore del link al passaggio del mouse in modalità scura */
+}
+
+.icons a {
+    margin: 0;
+    padding: 0;
+    color: black;
+    display: flex;
+    gap: 20px;
+    /* Stile per i link nelle icone: rimozione di margini e padding,
+       colore del testo, layout flessibile con gap tra gli elementi */
+}
+
+.sicons {
+    margin: 0;
+    padding: 0;
+    display: none;
+    /* Stile per le icone secondarie: rimozione di margini e padding,
+       inizialmente nascoste */
+}
+
+.sicons a {
+    margin: 0;
+    padding: 0;
+    color: black;
+    letter-spacing: 10px;
+    transition: all 5s;
+    /* Stile per i link nelle icone secondarie: rimozione di margini e padding,
+       colore del testo, spaziatura tra lettere e transizione */
+}
+
+.sicons a:hover {
+    margin: 0;
+    padding: 0;
+    /* Stile per i link nelle icone secondarie al passaggio del mouse */
+}
+
+.header_light .sicons a:hover {
+    color: dodgerblue;
+    /* Colore del link nelle icone secondarie al passaggio del mouse in modalità chiara */
+}
+
+.header_dark .sicons a:hover {
+    color: purple;
+    /* Colore del link nelle icone secondarie al passaggio del mouse in modalità scura */
+}
+
+.home {
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    /* Sezione home: altezza 90% della viewport, larghezza 100% e posizione relativa */
+}
+
+.containerlogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    /* Contenitore per il logo: layout flessibile,
+       allineamento centrato, altezza 100% */
+}
+
+.logo_monet {
+    max-width: 100%;
+    max-height: 100%;
+    /* Immagine del logo: larghezza e altezza massime 100% */
+}
+
+.searchbar {
+    position: absolute;
+    min-height: 90vh;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+    display: none;
+    z-index: 2;
+    /* Barra di ricerca: posizione assoluta, altezza minima 90% della viewport,
+       larghezza 100%, filtro sfocatura, layout flessibile con colonna,
+       padding superiore e inferiore, inizialmente nascosta, z-index */
+}
+
+.show_searchbar {
+    display: block;
+    /* Mostra la barra di ricerca */
+}
+
+.searchbar div {
+    height: 180px;
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0 5%;
+    flex-direction: column;
+    position: relative;
+    font-size: 19rem;
+    /* Contenitore interno della barra di ricerca: altezza fissa,
+       larghezza 60%, centrato, layout flessibile con colonna,
+       overflow nascosto, padding laterale e posizione relativa */
+}
+
+.searchbar div a {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    margin-bottom: 50px;
+    padding: 4px 14px;
+    border-radius: 3px;
+    font-size: 1.9rem;
+    /* Link di chiusura nella barra di ricerca: posizione assoluta,
+       margini, padding, bordo arrotondato e dimensione del testo */
+}
+
+.searchbar div input {
+    height: 54px;
+    width: 100%;
+    padding-left: 20px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    /* Campo di input nella barra di ricerca: altezza e larghezza,
+       padding sinistro, senza contorno, dimensione del testo e bordo arrotondato */
+}
+
+.searchbar input::placeholder {
+    color: white;
+    /* Colore del testo segnaposto nel campo di input della barra di ricerca */
+}
+
+.searchbar_light .searchbar div {
+    background-color: rgba(255, 255, 255, 0.05);
+    /* Colore di sfondo per la barra di ricerca in modalità chiara */
+}
+
+.searchbar_dark .searchbar div {
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Colore di sfondo per la barra di ricerca in modalità scura */
+}
+
+.searchbar_light .searchbar div a {
+    background-color: white;
+    color: black;
+    /* Stile del link di chiusura nella barra di ricerca in modalità chiara */
+}
+
+.searchbar_dark .searchbar div a {
+    background-color: black;
+    color: white;
+    /* Stile del link di chiusura nella barra di ricerca in modalità scura */
+}
+
+.searchbar_light .searchbar div input {
+    border: 1px solid rgba(0, 0, 0, 0.674);
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Stile del campo di input nella barra di ricerca in modalità chiara */
+}
+
+.searchbar_dark .searchbar div input{
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+/* Stile del campo di input nella barra di ricerca in modalità scura */
+}
+
+.form {
+    position: absolute;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+    z-index: 2;
+    /* Form: posizione assoluta, altezza 90% della viewport,
+       larghezza 100%, layout flessibile con colonna,
+       centrato e inizialmente nascosto, z-index 2 */
+}
+
+.show_form {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Mostra il form: layout flessibile, centrato */
+}
+
+.form_container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    /* Contenitore principale del form: altezza e larghezza 100%,
+       layout flessibile con colonna, gap tra gli elementi e overflow nascosto */
+}
+
+.form_main {
+    height: 550px;
+    width: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    border-radius: 16px;
+    backdrop-filter: blur(30px);
+    padding: 0 3%;
+    position: relative;
+    overflow: hidden;
+    /* Form principale: dimensioni fisse, layout flessibile con colonna,
+       bordi arrotondati, filtro sfocatura, padding laterale e overflow nascosto */
+}
+
+.loginform_light .form_main {
+    background-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* Stile del form principale in modalità chiara:
+       colore di sfondo, ombra e bordo */
+}
+
+.loginform_dark .form_main {
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 10px 10px 8px rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    /* Stile del form principale in modalità scura:
+       colore di sfondo, ombra e bordo */
+}
+
+#close_form {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    margin-bottom: 50px;
+    padding: 4px 14px;
+    border-radius: 0px 0px 0px 16px;
+    font-size: 1.9rem;
+    /* Stile del pulsante di chiusura del form: posizione assoluta,
+       margini, padding, bordo arrotondato e dimensione del testo */
+}
+
+.loginform_light #close_form {
+    background-color: white;
+    color: black;
+    /* Stile del pulsante di chiusura del form in modalità chiara */
+}
+
+.loginform_dark #close_form {
+    background-color: black;
+    color: white;
+    /* Stile del pulsante di chiusura del form in modalità scura */
+}
+
+.email, .password {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    /* Contenitori dei campi email e password: larghezza 100%,
+       layout flessibile con colonna */
+}
+
+.email label {
+    margin-top: 20px;
+    /* Margine superiore per l'etichetta del campo email */
+}
+
+label {
+    margin-bottom: 5px;
+    /* Margine inferiore per tutte le etichette */
+}
+
+.loginform_light label {
+    color: black;
+    /* Colore delle etichette in modalità chiara */
+}
+
+.loginform_dark label {
+    color: white;
+    /* Colore delle etichette in modalità scura */
+}
+
+.email input, .password input {
+    height: 45px;
+    width: 350px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    outline: none;
+    padding: 10px;
+    /* Stile dei campi email e password: altezza e larghezza fisse,
+       bordi arrotondati, margine inferiore, senza contorno e padding */
+}
+
+.loginform_light .email input, .loginform_light .password input {
+    background: rgba(255, 255, 255, 0.107);
+    border: 1px solid rgba(255, 255, 255, 0.591);
+    color: black;
+    /* Stile dei campi email e password in modalità chiara:
+       colore di sfondo, bordo e colore del testo */
+}
+
+.loginform_dark .email input, .loginform_dark .password input {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    color: white;
+    /* Stile dei campi email e password in modalità scura:
+       colore di sfondo, bordo e colore del testo */
+}
+
+.loginform_light .email input::placeholder, .loginform_light .password input::placeholder {
+    color: black;
+    /* Colore del placeholder nei campi email e password in modalità chiara */
+}
+
+.loginform_dark .email input::placeholder, .loginform_dark .password input::placeholder {
+    color: white;
+    /* Colore del placeholder nei campi email e password in modalità scura */
+}
+
+.form_main p a, .form_main a {
+    margin-top: -8px;
+    margin-bottom: 15px;
+    color: black;
+    /* Stile dei link nel form principale: margini e colore del testo */
+}
+
+.form_container button {
+    height: 40px;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    margin-top: 25px;
+    transition: .5s;
+    /* Stile del pulsante nel form: altezza e larghezza fisse,
+       bordi arrotondati, senza bordo, margine superiore e transizione */
+}
+
+.loginform_light .form_container button {
+    background-color: black;
+    color: white;
+    /* Stile del pulsante in modalità chiara: colore di sfondo e del testo */
+}
+
+.loginform_dark .form_container button {
+    background-color: white;
+    color: black;
+    /* Stile del pulsante in modalità scura: colore di sfondo e del testo */
+}
+
+.loginform_light .form_container button:hover {
+    background-color: dodgerblue;
+    /* Colore di sfondo del pulsante al passaggio del mouse in modalità chiara */
+}
+
+.loginform_dark .form_container button:hover {
+    background-color: purple;
+    /* Colore di sfondo del pulsante al passaggio del mouse in modalità scura */
+}
+
+.form h1 {
+    font-size: 2.3rem;
+    margin-top: -6%;
+    /* Stile del titolo nel form: dimensione del testo e margine superiore negativo */
+}
+
+.loginform_light .form h1 {
+    color: white;
+    /* Colore del titolo nel form in modalità chiara */
+}
+
+.loginform_dark .form h1 {
+    color: black;
+    /* Colore del titolo nel form in modalità scura */
+}
