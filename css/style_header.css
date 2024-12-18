@@ -33,12 +33,12 @@ html body {
 }
 
 .background_light {
-    background-image: url(/images/sfondohome.jpg);
+    background-image: url(/monet_website/images/sfondohome.jpg);
     /* Immagine di sfondo per la modalità chiara */
 }
 
 .background_dark {
-    background-image: url(/images/sfondoscuro.jpg);
+    background-image: url(/monet_website/images/sfondoscuro.jpg);
     /* Immagine di sfondo per la modalità scura */
 }
 
