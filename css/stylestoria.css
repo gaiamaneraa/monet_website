@@ -4,7 +4,7 @@
 }
 
 .background_dark {
-    background-image: url(/images/sfondoscuro_blur.jpg);
+    background-image: url(../images/sfondoscuro_blur.jpg);
     /* Imposta un'immagine di sfondo per la modalità scura */
 }
 
