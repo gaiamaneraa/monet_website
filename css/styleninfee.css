@@ -20,7 +20,7 @@ body {
 }
 
 .background_dark {
-  background-image: url(/images/sfondoscuro_blur.jpg);
+  background-image: url(../images/sfondoscuro_blur.jpg);
   /* Sfondo scuro con immagine sfocata */
 }
 
