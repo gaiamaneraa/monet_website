@@ -5,7 +5,7 @@
 }
 
 .background_dark {
-    background-image: url(/images/sfondoscuro_blur.jpg);
+    background-image: url(../images/sfondoscuro_blur.jpg);
     background-size: cover;
     /* Imposta un'immagine di sfondo per la modalità scura e la ridimensiona per coprire l'intera area */
 }
